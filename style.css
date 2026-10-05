@@ -1,0 +1,73 @@
+/* ==========================================================
+   Дополнения к Bootstrap. Сетка, отступы, формы и таблица
+   оформляются классами фреймворка, здесь только то,
+   чего в нём нет. Mobile First: базовые правила для
+   смартфонов, расширения через min-width.
+   ========================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Шапка ---------- */
+.site-name {
+    font-size: 1.375rem;
+}
+
+.logo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* ---------- Меню ---------- */
+.nav .nav-link {
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.nav .nav-link:last-child {
+    border-bottom: 0;
+}
+
+.nav .nav-link:hover,
+.nav .nav-link:focus {
+    background: #cfcfcf;
+}
+
+/* ---------- Таблица: на узком экране прокручивается внутри обёртки ---------- */
+.table {
+    min-width: 480px;
+}
+
+/* ==========================================================
+   От 768px (брейкпоинт md в Bootstrap)
+   ========================================================== */
+@media screen and (min-width: 768px) {
+    .site-name {
+        font-size: 1.875rem;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav .nav-link {
+        border-bottom: 0;
+        border-right: 1px solid #bbbbbb;
+    }
+
+    .nav .nav-link:first-child {
+        border-left: 1px solid #bbbbbb;
+    }
+}
+
+/* ==========================================================
+   От 992px (lg): таблица стоит рядом со ссылками
+   ========================================================== */
+@media screen and (min-width: 992px) {
+    .table {
+        min-width: 0;
+    }
+}
